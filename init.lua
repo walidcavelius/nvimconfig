@@ -966,5 +966,11 @@ require('lazy').setup({
   },
 })
 
+-- Adjust indentation settings for HTML files
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'html',
+  command = 'setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab',
+})
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
